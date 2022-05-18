@@ -1,0 +1,20 @@
+name,parent,ip,mitre
+T1120 (arpscan) - 192.168.229.131,,192.168.229.131,T1120
+T1046 (tcpscan) - 192.168.229.131,T1120 (arpscan) - 192.168.229.131,192.168.229.131,"T1046, T1018"
+TA0008 (exploit_lateral) - 192.168.229.144,T1046 (tcpscan) - 192.168.229.131,192.168.229.144,TA0008
+TA0008 (exploit_lateral) - 192.168.229.144,TA0008 (exploit_lateral) - 192.168.229.144,192.168.229.144,TA0008
+T1087 (get_local_user) - 192.168.229.144,TA0008 (exploit_lateral) - 192.168.229.144,192.168.229.144,T1087
+T1087 (get_domain_user) - 192.168.229.144,TA0008 (exploit_lateral) - 192.168.229.144,192.168.229.144,T1087
+T1016(get_networkinfo) - 192.168.229.144,TA0008 (exploit_lateral) - 192.168.229.144,192.168.229.144,"T1016, T1049"
+T1083 (get_netdrvinfo) - 192.168.229.144,TA0008 (exploit_lateral) - 192.168.229.144,192.168.229.144,"T1083, T1135"
+TA0009 (get_nw_secretinfo) - 192.168.229.144,TA0008 (exploit_lateral) - 192.168.229.144,192.168.229.144,TA0009
+T1083 (get_netdrvinfo) - 192.168.229.144,TA0008 (exploit_lateral) - 192.168.229.144,192.168.229.144,"T1083, T1135"
+TA0009 (get_nw_secretinfo) - 192.168.229.144,TA0008 (exploit_lateral) - 192.168.229.144,192.168.229.144,TA0009
+T1003 (get_ospatch) - 192.168.229.144,TA0008 (exploit_lateral) - 192.168.229.144,192.168.229.144,"T1003, T1059, T1082"
+T1057 (get_processinfo) - 192.168.229.144,TA0008 (exploit_lateral) - 192.168.229.144,192.168.229.144,"T1057, T1059"
+T1083 (get_netdrvinfo) - 192.168.229.144,TA0008 (exploit_lateral) - 192.168.229.144,192.168.229.144,"T1083, T1135"
+TA0009 (get_nw_secretinfo) - 192.168.229.144,TA0008 (exploit_lateral) - 192.168.229.144,192.168.229.144,TA0009
+T1083 (get_netdrvinfo) - 192.168.229.144,TA0008 (exploit_lateral) - 192.168.229.144,192.168.229.144,"T1083, T1135"
+TA0009 (get_nw_secretinfo) - 192.168.229.144,TA0008 (exploit_lateral) - 192.168.229.144,192.168.229.144,TA0009
+T1083 (get_maindrvinfo) - 192.168.229.144,TA0008 (exploit_lateral) - 192.168.229.144,192.168.229.144,"T1083, TA0009, TA0010"
+TA0009 (get_local_secretinfo) - 192.168.229.144,TA0008 (exploit_lateral) - 192.168.229.144,192.168.229.144,TA0009

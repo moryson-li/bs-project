@@ -1,0 +1,47 @@
+
+Host Name:                 BLUETEAM-SERVER
+OS Name:                   Microsoft Windows Server 2008 R2 Datacenter 
+OS Version:                6.1.7601 Service Pack 1 Build 7601
+OS Manufacturer:           Microsoft Corporation
+OS Configuration:          Primary Domain Controller
+OS Build Type:             Multiprocessor Free
+Registered Owner:          Windows ??
+Registered Organization:   
+Product ID:                00496-001-0001283-84233
+Original Install Date:     2020/6/18, 15:43:56
+System Boot Time:          2022/5/6, 14:12:20
+System Manufacturer:       VMware, Inc.
+System Model:              VMware Virtual Platform
+System Type:               x64-based PC
+Processor(s):              2 Processor(s) Installed.
+                           [01]: Intel64 Family 6 Model 158 Stepping 10 GenuineIntel ~2208 Mhz
+                           [02]: Intel64 Family 6 Model 158 Stepping 10 GenuineIntel ~2208 Mhz
+BIOS Version:              Phoenix Technologies LTD 6.00, 2020/11/12
+Windows Directory:         C:\Windows
+System Directory:          C:\Windows\system32
+Boot Device:               \Device\HarddiskVolume1
+System Locale:             zh-cn;Chinese (China)
+Input Locale:              zh-cn;Chinese (China)
+Time Zone:                 (UTC+08:00) Beijing, Chongqing, Hong Kong, Urumqi
+Total Physical Memory:     2,047 MB
+Available Physical Memory: 1,437 MB
+Virtual Memory: Max Size:  4,095 MB
+Virtual Memory: Available: 3,439 MB
+Virtual Memory: In Use:    656 MB
+Page File Location(s):     C:\pagefile.sys
+Domain:                    pinginglab.net
+Logon Server:              N/A
+Hotfix(s):                 2 Hotfix(s) Installed.
+                           [01]: KB2999226
+                           [02]: KB976902
+Network Card(s):           2 NIC(s) Installed.
+                           [01]: Intel(R) PRO/1000 MT Network Connection
+                                 Connection Name: ????
+                                 DHCP Enabled:    Yes
+                                 DHCP Server:     192.168.229.254
+                                 IP address(es)
+                                 [01]: 192.168.229.144
+                                 [02]: fe80::8d1d:f9c1:3666:46e1
+                           [02]: Intel(R) PRO/1000 MT Network Connection
+                                 Connection Name: ???? 2
+                                 Status:          Media disconnected

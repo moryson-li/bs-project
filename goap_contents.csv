@@ -1,0 +1,3 @@
+192.168.229.131,arpscan,tcpscan
+192.168.229.144,exploit_lateral,get_local_user,get_domain_user,get_netdrvinfo,get_nw_secretinfo
+192.168.229.144,get_maindrvinfo,get_local_secretinfo

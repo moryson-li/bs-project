@@ -1,0 +1,13 @@
+192.168.229.131,arpscan,tcpscan
+192.168.229.131,arpscan,tcpscan
+192.168.229.131,arpscan,tcpscan
+192.168.229.144,exploit_lateral,get_local_user,get_domain_user,use_local_user,get_networkinfo,get_ospatch,get_processinfo,get_maindrvinfo,get_local_secretinfo
+192.168.229.131,arpscan,tcpscan
+192.168.229.144,exploit_lateral,get_local_user,get_domain_user,get_netdrvinfo,get_nw_secretinfo
+192.168.229.131,arpscan,tcpscan
+192.168.229.144,exploit_lateral,get_local_user,get_domain_user,get_ospatch,use_local_user,get_networkinfo,get_processinfo,get_maindrvinfo,get_local_secretinfo
+192.168.229.144,exploit_lateral,get_local_user,get_domain_user,get_networkinfo,get_netdrvinfo,get_nw_secretinfo
+192.168.229.144,get_netdrvinfo,get_nw_secretinfo
+192.168.229.144,get_ospatch,use_domain_user,get_logon_user,get_processinfo,get_netdrvinfo,get_nw_secretinfo
+192.168.229.144,use_local_user,get_netdrvinfo,get_nw_secretinfo
+192.168.229.144,get_maindrvinfo,get_local_secretinfo
